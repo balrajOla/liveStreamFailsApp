@@ -6,5 +6,9 @@ target 'LiveStreamFails' do
   use_frameworks!
 
   # Pods for LiveStreamFails
+  pod 'Alamofire'
+  pod 'PromiseKit'
+  pod 'SwiftSoup'
+  pod 'AlamofireImage'
 
 end

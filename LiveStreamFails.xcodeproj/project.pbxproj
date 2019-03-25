@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		0847F685B128FB0062D028ED /* Pods_LiveStreamFails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAA74DFF1BBD09D0C983034 /* Pods_LiveStreamFails.framework */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
-		A232541622461DD5001E8C89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541522461DD5001E8C89 /* ViewController.swift */; };
-		A232541922461DD5001E8C89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A232541722461DD5001E8C89 /* Main.storyboard */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
-		A232541E22461DD6001E8C89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A232541C22461DD6001E8C89 /* LaunchScreen.storyboard */; };
+		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
+		A232543522468E3B001E8C89 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A232543322468E3B001E8C89 /* HomeScreenViewController.xib */; };
+		A232543C2246AB5B001E8C89 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543B2246AB5A001E8C89 /* Route.swift */; };
+		A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543E2246AC0A001E8C89 /* LiveStreamFailsRequest.swift */; };
+		A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23254402246AD32001E8C89 /* DictionaryEncodable.swift */; };
+		A23254432246B500001E8C89 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23254422246B500001E8C89 /* ServiceType.swift */; };
+		A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23254452246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift */; };
+		A23254482246B5FB001E8C89 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23254472246B5FB001E8C89 /* Service.swift */; };
+		A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23254492246B9AB001E8C89 /* Service+RequestHelper.swift */; };
+		A232544C22479058001E8C89 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544B22479058001E8C89 /* Operators.swift */; };
+		A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544D22485E75001E8C89 /* HTMLParser.swift */; };
+		A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544F22486ACC001E8C89 /* Result+MapValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +30,20 @@
 		9AD3230F70654C9EA2D31F4E /* Pods-LiveStreamFails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStreamFails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails.debug.xcconfig"; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A232541522461DD5001E8C89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A232541822461DD5001E8C89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A232541D22461DD6001E8C89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A232541F22461DD6001E8C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A232543222468E3B001E8C89 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		A232543322468E3B001E8C89 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
+		A232543B2246AB5A001E8C89 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A232543E2246AC0A001E8C89 /* LiveStreamFailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsRequest.swift; sourceTree = "<group>"; };
+		A23254402246AD32001E8C89 /* DictionaryEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncodable.swift; sourceTree = "<group>"; };
+		A23254422246B500001E8C89 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		A23254452246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsPostsResponse.swift; sourceTree = "<group>"; };
+		A23254472246B5FB001E8C89 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A23254492246B9AB001E8C89 /* Service+RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+RequestHelper.swift"; sourceTree = "<group>"; };
+		A232544B22479058001E8C89 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		A232544D22485E75001E8C89 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
+		A232544F22486ACC001E8C89 /* Result+MapValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+MapValue.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +88,79 @@
 		A232541222461DD5001E8C89 /* LiveStreamFails */ = {
 			isa = PBXGroup;
 			children = (
+				A232543922469047001E8C89 /* Services */,
+				A232543822469004001E8C89 /* Library */,
+				A232543722468FF7001E8C89 /* Models */,
+				A232543622468FEB001E8C89 /* Views */,
 				A232541322461DD5001E8C89 /* AppDelegate.swift */,
-				A232541522461DD5001E8C89 /* ViewController.swift */,
-				A232541722461DD5001E8C89 /* Main.storyboard */,
 				A232541A22461DD6001E8C89 /* Assets.xcassets */,
-				A232541C22461DD6001E8C89 /* LaunchScreen.storyboard */,
 				A232541F22461DD6001E8C89 /* Info.plist */,
+				A232543222468E3B001E8C89 /* HomeScreenViewController.swift */,
+				A232543322468E3B001E8C89 /* HomeScreenViewController.xib */,
 			);
 			path = LiveStreamFails;
+			sourceTree = "<group>";
+		};
+		A232543622468FEB001E8C89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A232543722468FF7001E8C89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A23254442246B55B001E8C89 /* Response */,
+				A232543D2246ABED001E8C89 /* Requests */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A232543822469004001E8C89 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A23254402246AD32001E8C89 /* DictionaryEncodable.swift */,
+				A232544B22479058001E8C89 /* Operators.swift */,
+				A232544D22485E75001E8C89 /* HTMLParser.swift */,
+				A232544F22486ACC001E8C89 /* Result+MapValue.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A232543922469047001E8C89 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A232543A2246AB3D001E8C89 /* Libs */,
+				A23254422246B500001E8C89 /* ServiceType.swift */,
+				A23254472246B5FB001E8C89 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A232543A2246AB3D001E8C89 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A23254492246B9AB001E8C89 /* Service+RequestHelper.swift */,
+				A232543B2246AB5A001E8C89 /* Route.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		A232543D2246ABED001E8C89 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A232543E2246AC0A001E8C89 /* LiveStreamFailsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		A23254442246B55B001E8C89 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A23254452246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		E05B47C56B80B3290F4F3E97 /* Frameworks */ = {
@@ -99,6 +182,7 @@
 				A232540C22461DD5001E8C89 /* Sources */,
 				A232540D22461DD5001E8C89 /* Frameworks */,
 				A232540E22461DD5001E8C89 /* Resources */,
+				D85969D8213FFCCCF8B66BE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,9 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A232541E22461DD6001E8C89 /* LaunchScreen.storyboard in Resources */,
 				A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */,
-				A232541922461DD5001E8C89 /* Main.storyboard in Resources */,
+				A232543522468E3B001E8C89 /* HomeScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +257,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D85969D8213FFCCCF8B66BE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -181,31 +288,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A232541622461DD5001E8C89 /* ViewController.swift in Sources */,
+				A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */,
+				A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */,
+				A232544C22479058001E8C89 /* Operators.swift in Sources */,
+				A23254482246B5FB001E8C89 /* Service.swift in Sources */,
+				A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */,
+				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
+				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
+				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
+				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
+				A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */,
+				A23254432246B500001E8C89 /* ServiceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A232541722461DD5001E8C89 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A232541822461DD5001E8C89 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A232541C22461DD6001E8C89 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A232541D22461DD6001E8C89 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A232542022461DD6001E8C89 /* Debug */ = {
@@ -332,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L88F2NQ59B;
 				INFOPLIST_FILE = LiveStreamFails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.balraj.LiveStreamFails;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -351,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L88F2NQ59B;
 				INFOPLIST_FILE = LiveStreamFails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.balraj.LiveStreamFails;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

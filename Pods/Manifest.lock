@@ -1,3 +1,37 @@
-PODFILE CHECKSUM: be692264f714f7f14a8ce600506cae47f19809ab
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
+  - PromiseKit (6.8.3):
+    - PromiseKit/CorePromise (= 6.8.3)
+    - PromiseKit/Foundation (= 6.8.3)
+    - PromiseKit/UIKit (= 6.8.3)
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/Foundation (6.8.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.3):
+    - PromiseKit/CorePromise
+  - SwiftSoup (1.7.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - PromiseKit
+  - SwiftSoup
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - PromiseKit
+    - SwiftSoup
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
+
+PODFILE CHECKSUM: 24bdf4a161b4862f16afaba189cc299180ef58df
 
 COCOAPODS: 1.5.3
