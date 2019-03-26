@@ -16,10 +16,8 @@ enum ServiceError: Error {
 
 extension Service {
   func request(route: Route) -> Promise<String> {
-    guard let url = URL(string: route.requestProperties.path)
-      else
-    { return  Promise(error: ServiceError.urlInvalid) }
-    
+    let url = serverConfig.apiBaseUrl.appendingPathComponent(route.requestProperties.path)
+      
     return Promise<String> { seal in
       Alamofire.request(url,
                         method: route.requestProperties.method,

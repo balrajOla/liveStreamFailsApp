@@ -11,6 +11,12 @@ import PromiseKit
 import SwiftSoup
 
 public struct Service: ServiceType {
+  public let serverConfig: ServerConfigType
+  
+  public init(serverConfig: ServerConfigType = ServerConfig.production) {
+    self.serverConfig = serverConfig
+  }
+  
   public func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<[LiveStreamFailsPostsResponse]> {
     return request
       |> Route.createLoadPosts(request:)

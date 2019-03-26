@@ -22,6 +22,10 @@
 		A232544C22479058001E8C89 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544B22479058001E8C89 /* Operators.swift */; };
 		A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544D22485E75001E8C89 /* HTMLParser.swift */; };
 		A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232544F22486ACC001E8C89 /* Result+MapValue.swift */; };
+		A2325458224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325457224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift */; };
+		A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325459224A9435001E8C89 /* AppEnvironment.swift */; };
+		A232545C224A9462001E8C89 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545B224A9462001E8C89 /* Environment.swift */; };
+		A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545D224A95BE001E8C89 /* ServerConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		A232544B22479058001E8C89 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		A232544D22485E75001E8C89 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		A232544F22486ACC001E8C89 /* Result+MapValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+MapValue.swift"; sourceTree = "<group>"; };
+		A2325457224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsPostsUsecase.swift; sourceTree = "<group>"; };
+		A2325459224A9435001E8C89 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		A232545B224A9462001E8C89 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A232545D224A95BE001E8C89 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 		A232541222461DD5001E8C89 /* LiveStreamFails */ = {
 			isa = PBXGroup;
 			children = (
+				A2325456224A4C01001E8C89 /* Usecases */,
 				A232543922469047001E8C89 /* Services */,
 				A232543822469004001E8C89 /* Library */,
 				A232543722468FF7001E8C89 /* Models */,
@@ -124,6 +133,8 @@
 				A232544B22479058001E8C89 /* Operators.swift */,
 				A232544D22485E75001E8C89 /* HTMLParser.swift */,
 				A232544F22486ACC001E8C89 /* Result+MapValue.swift */,
+				A2325459224A9435001E8C89 /* AppEnvironment.swift */,
+				A232545B224A9462001E8C89 /* Environment.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			children = (
 				A23254492246B9AB001E8C89 /* Service+RequestHelper.swift */,
 				A232543B2246AB5A001E8C89 /* Route.swift */,
+				A232545D224A95BE001E8C89 /* ServerConfig.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -161,6 +173,14 @@
 				A23254452246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		A2325456224A4C01001E8C89 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				A2325457224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift */,
+			);
+			path = Usecases;
 			sourceTree = "<group>";
 		};
 		E05B47C56B80B3290F4F3E97 /* Frameworks */ = {
@@ -288,13 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2325458224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift in Sources */,
 				A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */,
 				A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */,
 				A232544C22479058001E8C89 /* Operators.swift in Sources */,
+				A232545C224A9462001E8C89 /* Environment.swift in Sources */,
 				A23254482246B5FB001E8C89 /* Service.swift in Sources */,
 				A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */,
 				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
+				A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */,
 				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
+				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
 				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
