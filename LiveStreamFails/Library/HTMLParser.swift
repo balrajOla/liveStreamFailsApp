@@ -25,7 +25,7 @@ struct HTMLParser {
     ?? Result.rejected(HTMLParserError.inValidHTMLString)
   }
   
-  public static func select(path: String)
+  public static func selectDoc(path: String)
     -> (_ document: Result<Document>)
     -> Result<Elements> {
       return { (document: Result<Document>) -> Result<Elements> in
@@ -34,6 +34,16 @@ struct HTMLParser {
             .map { Result.fulfilled($0) }
             ?? Result.rejected(HTMLParserError.inValidSelectionPath)
         }
+      }
+  }
+  
+  public static func selectElem(path: String)
+    -> (_ element: Element)
+    -> Result<Elements> {
+      return { (element: Element) -> Result<Elements> in
+          return (try? element.select(path))
+            .map { Result.fulfilled($0) }
+            ?? Result.rejected(HTMLParserError.inValidSelectionPath)
       }
   }
 }

@@ -19,14 +19,14 @@ public struct Service: ServiceType {
   }
   
   private func parse(response: Promise<String>) -> Promise<[LiveStreamFailsPostsResponse]> {
-    let selectPostCard = HTMLParser.select(path: "div.post-card")
+    let selectPostCard = HTMLParser.selectDoc(path: "div.post-card")
     
     return response
       .then { (stringResponse: String) -> Promise<[LiveStreamFailsPostsResponse]> in
         return stringResponse
           |> HTMLParser.createDocument(fromHTMLString:)
           |> selectPostCard
-          |> resultMap(f: { $0.map{ LiveStreamFailsPostsResponse(element: $0) } })
+          |> resultMap(f: { $0.compactMap{ LiveStreamFailsPostsResponse(element: $0) } })
           |> mapToPromise(result:)
     }
   }
