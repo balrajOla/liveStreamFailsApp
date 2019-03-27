@@ -26,6 +26,8 @@
 		A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325459224A9435001E8C89 /* AppEnvironment.swift */; };
 		A232545C224A9462001E8C89 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545B224A9462001E8C89 /* Environment.swift */; };
 		A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545D224A95BE001E8C89 /* ServerConfig.swift */; };
+		A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545F224A9EB0001E8C89 /* Paginator.swift */; };
+		A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		A2325459224A9435001E8C89 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		A232545B224A9462001E8C89 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		A232545D224A95BE001E8C89 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		A232545F224A9EB0001E8C89 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				A23254442246B55B001E8C89 /* Response */,
 				A232543D2246ABED001E8C89 /* Requests */,
+				A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				A232544F22486ACC001E8C89 /* Result+MapValue.swift */,
 				A2325459224A9435001E8C89 /* AppEnvironment.swift */,
 				A232545B224A9462001E8C89 /* Environment.swift */,
+				A232545F224A9EB0001E8C89 /* Paginator.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
+				A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */,
 				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
 				A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */,
 				A23254432246B500001E8C89 /* ServiceType.swift in Sources */,
+				A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

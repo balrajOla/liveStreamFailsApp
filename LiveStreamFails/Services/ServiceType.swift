@@ -11,5 +11,5 @@ import PromiseKit
 
 public protocol ServiceType {
   func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel
-  ) -> Promise<[LiveStreamFailsPostsResponse]>
+  ) -> Promise<LiveStreamFailsCollection>
 }

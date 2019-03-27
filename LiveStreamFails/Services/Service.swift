@@ -17,22 +17,22 @@ public struct Service: ServiceType {
     self.serverConfig = serverConfig
   }
   
-  public func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<[LiveStreamFailsPostsResponse]> {
+  public func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<LiveStreamFailsCollection> {
     return request
       |> Route.createLoadPosts(request:)
       |> request(route:)
       |> parse(response:)
   }
   
-  private func parse(response: Promise<String>) -> Promise<[LiveStreamFailsPostsResponse]> {
+  private func parse(response: Promise<String>) -> Promise<LiveStreamFailsCollection> {
     let selectPostCard = HTMLParser.selectDoc(path: "div.post-card")
     
     return response
-      .then { (stringResponse: String) -> Promise<[LiveStreamFailsPostsResponse]> in
+      .then { (stringResponse: String) -> Promise<LiveStreamFailsCollection> in
         return stringResponse
           |> HTMLParser.createDocument(fromHTMLString:)
           |> selectPostCard
-          |> resultMap(f: { $0.compactMap{ LiveStreamFailsPostsResponse(element: $0) } })
+          |> resultMap(f: { LiveStreamFailsCollection(elements: $0) })
           |> mapToPromise(result:)
     }
   }

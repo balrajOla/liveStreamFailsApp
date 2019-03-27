@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 // Need to fetch data from post service
 // paginate
@@ -14,6 +15,20 @@ import Foundation
 // retry if required
 // internet network handling
 
-struct LiveStreamFailsPostsUsecase {
+public struct LiveStreamFailsPostsUsecase {
+  private let paginator: Paginator<LiveStreamFailsCollection>
   
+  private let pagesize = 10
+  private let fetchLiveFeedPosts = { (page: Int, pageSize: Int) -> Promise<LiveStreamFailsCollection> in
+    return AppEnvironment.current.apiService.fetchLiveStreamFailPost(forRequest: LiveStreamFailsRequestModel.instantiate(pageNumber: page))
+  }
+  
+  public init() {
+    paginator = Paginator<LiveStreamFailsCollection>(pageSize: pagesize,
+                                                     asyncTask: fetchLiveFeedPosts)
+  }
+  
+  public func getLiveFeedPosts() -> Promise<LiveStreamFailsCollection> {
+    return self.paginator.fetchNextPage()
+  }
 }
