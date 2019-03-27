@@ -17,6 +17,10 @@ public class LiveStreamFailsCollection: Aggregatable {
     self.posts = elements.compactMap{ LiveStreamFailsPostsResponse(element: $0) }
   }
   
+  public init() {
+    self.posts = [LiveStreamFailsPostsResponse]()
+  }
+  
   public func aggregate(result: Aggregatable) -> Aggregatable {
     self.posts = (result as? LiveStreamFailsCollection).flatMap { self.posts + $0.posts } ?? self.posts
     return self

@@ -9,12 +9,6 @@
 import Foundation
 import PromiseKit
 
-// Need to fetch data from post service
-// paginate
-// handle errors
-// retry if required
-// internet network handling
-
 public struct LiveStreamFailsPostsUsecase {
   private let paginator: Paginator<LiveStreamFailsCollection>
   

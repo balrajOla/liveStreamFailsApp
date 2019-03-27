@@ -14,12 +14,15 @@ import Alamofire
  */
 internal enum Route {
   case createLoadPosts(request: LiveStreamFailsRequestModel)
+  case fetchPostDetail(postId: String)
   
   internal var requestProperties:
     (method: HTTPMethod, path: String, query: [String: Any]) {
     switch self {
     case let .createLoadPosts(request):
       return (HTTPMethod.get, "/load/loadPosts.php", request.dictionary() ?? [String: Any]())
+    case let .fetchPostDetail(postId):
+      return (HTTPMethod.get, "/post/\(postId)", [String: Any]())
     }
   }
 }

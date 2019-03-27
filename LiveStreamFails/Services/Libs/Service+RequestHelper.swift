@@ -12,6 +12,7 @@ import Alamofire
 
 enum ServiceError: Error {
   case urlInvalid
+  case parsingIssue
 }
 
 extension Service {
