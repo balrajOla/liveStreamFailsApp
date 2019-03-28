@@ -28,6 +28,11 @@
 		A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545D224A95BE001E8C89 /* ServerConfig.swift */; };
 		A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545F224A9EB0001E8C89 /* Paginator.swift */; };
 		A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */; };
+		A2734F0E224C8609004ACDB8 /* FailStreamDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */; };
+		A2734F0F224C8609004ACDB8 /* FailStreamDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */; };
+		A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */; };
+		A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */; };
+		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		A232545D224A95BE001E8C89 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		A232545F224A9EB0001E8C89 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsCollection.swift; sourceTree = "<group>"; };
+		A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailStreamDetailViewCell.swift; sourceTree = "<group>"; };
+		A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailStreamDetailViewCell.xib; sourceTree = "<group>"; };
+		A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+CollectionViewDatasource.swift"; sourceTree = "<group>"; };
+		A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,8 @@
 		A232543622468FEB001E8C89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2734F10224C9015004ACDB8 /* Extensions */,
+				A2734F0B224C85D4004ACDB8 /* CollectionViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +153,7 @@
 				A2325459224A9435001E8C89 /* AppEnvironment.swift */,
 				A232545B224A9462001E8C89 /* Environment.swift */,
 				A232545F224A9EB0001E8C89 /* Paginator.swift */,
+				A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -187,6 +200,24 @@
 				A2325457224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift */,
 			);
 			path = Usecases;
+			sourceTree = "<group>";
+		};
+		A2734F0B224C85D4004ACDB8 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */,
+				A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		A2734F10224C9015004ACDB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */,
+				A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E05B47C56B80B3290F4F3E97 /* Frameworks */ = {
@@ -257,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2734F0F224C8609004ACDB8 /* FailStreamDetailViewCell.xib in Resources */,
 				A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */,
 				A232543522468E3B001E8C89 /* HomeScreenViewController.xib in Resources */,
 			);
@@ -325,10 +357,14 @@
 				A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */,
 				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
+				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
+				A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
 				A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */,
 				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
+				A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */,
+				A2734F0E224C8609004ACDB8 /* FailStreamDetailViewCell.swift in Sources */,
 				A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */,
 				A23254432246B500001E8C89 /* ServiceType.swift in Sources */,
 				A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */,
