@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeepDiff
 
 extension HomeScreenViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,5 +25,27 @@ extension HomeScreenViewController: UICollectionViewDataSource {
     
     cell.set(data: data)
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    guard let cell = cell as? FailStreamDetailViewCell else {
+      return
+    }
+    
+    checkAndPrefetchFails(forIndexPath: indexPath)
+  }
+  
+  private func checkAndPrefetchFails(forIndexPath indexPath: IndexPath) {
+    if indexPath.row > ((self.dataSource?.count ?? 0) - 5) {
+      self.usecase.getLiveFeedPosts()
+        .done { response in
+          self.dataSource.map {
+            let changes = diff(old: $0, new: response.posts)
+            self.failStreamCollectionView.reload(changes: changes, updateData: {
+              self.dataSource = response.posts
+            })
+          }
+      }
+    }
   }
 }

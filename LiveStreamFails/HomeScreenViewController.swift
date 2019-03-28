@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeepDiff
 
 class HomeScreenViewController: UIViewController {
   @IBOutlet weak var failStreamCollectionView: UICollectionView!

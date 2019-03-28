@@ -10,5 +10,5 @@ target 'LiveStreamFails' do
   pod 'PromiseKit'
   pod 'SwiftSoup'
   pod 'AlamofireImage'
-
+  pod 'DeepDiff'
 end
