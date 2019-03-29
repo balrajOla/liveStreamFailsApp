@@ -33,6 +33,7 @@ extension HomeScreenViewController: UICollectionViewDataSource {
   
   private func checkAndPrefetchFails(forIndexPath indexPath: IndexPath) {
     if indexPath.row > ((self.dataSource?.count ?? 0) - 5) {
+      showLoader()
       _ = self.usecase.getLiveFeedPosts()
         .done { response in
           self.dataSource.map {
@@ -41,7 +42,7 @@ extension HomeScreenViewController: UICollectionViewDataSource {
               self.dataSource = response.posts
             })
           }
-      }
+        }.tap { _ in self.hideLoader() }
     }
   }
 }

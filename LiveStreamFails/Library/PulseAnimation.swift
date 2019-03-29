@@ -10,7 +10,7 @@ import UIKit
 
 class PulseAnimationView: UIView {
   
-  static var DEFAULT_COLOR = UIColor.red
+  static var DEFAULT_COLOR = UIColor.white
   static var DEFAULT_PADDING: CGFloat = 0
   
   @IBInspectable var color: UIColor = PulseAnimationView.DEFAULT_COLOR
