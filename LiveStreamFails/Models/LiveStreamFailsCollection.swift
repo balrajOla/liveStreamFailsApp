@@ -9,21 +9,15 @@
 import Foundation
 import SwiftSoup
 
-public class LiveStreamFailsCollection: Aggregatable {
-  public var posts: [LiveStreamFailsPostsResponse]
-  fileprivate var hasNextPage: Bool = true
+public struct LiveStreamFailsCollection: Aggregatable {
+  public var posts: [LiveStreamFailsPost]
   
-  public init(elements: Elements) {
-    self.posts = elements.compactMap{ LiveStreamFailsPostsResponse(element: $0) }
-  }
-  
-  public init() {
-    self.posts = [LiveStreamFailsPostsResponse]()
+  public init(posts: [LiveStreamFailsPost]) {
+    self.posts = posts
   }
   
   public func aggregate(result: Aggregatable) -> Aggregatable {
-    self.posts = (result as? LiveStreamFailsCollection).flatMap { self.posts + $0.posts } ?? self.posts
-    return self
+    return LiveStreamFailsCollection(posts: (result as? LiveStreamFailsCollection).flatMap { self.posts + $0.posts } ?? self.posts)
   }
 }
 
@@ -32,7 +26,24 @@ extension LiveStreamFailsCollection: Pagination {
     return true
   }
   
-  public func updatePaginationStatus(next: Bool) {
-    self.hasNextPage = next
+  public func updatePaginationStatus(next: Bool) {}
+}
+
+public struct LiveStreamFailsPost {
+  let id: Int
+  let title: String
+  
+  let game: String?
+  let imageUrl: URL?
+  let streamer: String?
+  var videoUrl: URL?
+  
+  public init(response: (res: LiveStreamFailsPostsResponse, videoUrl: URL?)) {
+    self.id = response.res.id
+    self.title = response.res.title
+    self.game = response.res.game
+    self.imageUrl = response.res.imageUrl
+    self.streamer = response.res.streamer
+    self.videoUrl = response.videoUrl
   }
 }

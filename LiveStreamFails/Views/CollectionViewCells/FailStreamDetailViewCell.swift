@@ -30,7 +30,7 @@ class FailStreamDetailViewCell: UICollectionViewCell {
     self.subTitle.text = nil
   }
   
-  public func set(data: LiveStreamFailsPostsResponse) {
+  public func set(data: LiveStreamFailsPost) {
     data.imageUrl.map { self.liveStreamImg.af_setImage(withURL: $0) }
     self.title.text = data.title
     self.subTitle.text = [data.streamer, data.game].compactMap { $0 }.joined(separator: " playing ")

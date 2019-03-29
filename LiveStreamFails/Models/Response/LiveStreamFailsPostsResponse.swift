@@ -69,7 +69,6 @@ public struct LiveStreamFailsPostsResponse {
   let game: String?
   let imageUrl: URL?
   let streamer: String?
-  var videoUrl: URL?
   
   init?(element: Element) {
     guard let title = getText(titlePath(element)),

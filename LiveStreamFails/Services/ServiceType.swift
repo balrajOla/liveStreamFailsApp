@@ -10,6 +10,7 @@ import Foundation
 import PromiseKit
 
 public protocol ServiceType {
-  func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel
-  ) -> Promise<LiveStreamFailsCollection>
+  func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<[LiveStreamFailsPostsResponse]>
+  
+  func fetchVideoStreamDetail(forPostId postId: String) -> Promise<(id: String, video: URL)>
 }

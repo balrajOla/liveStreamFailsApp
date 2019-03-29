@@ -17,74 +17,32 @@ public struct Service: ServiceType {
     self.serverConfig = serverConfig
   }
   
-  public func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<LiveStreamFailsCollection> {
+  public func fetchLiveStreamFailPost(forRequest request: LiveStreamFailsRequestModel) -> Promise<[LiveStreamFailsPostsResponse]> {
     return request
       |> Route.createLoadPosts(request:)
       |> request(route:)
       |> parse(response:)
-      |> requestDetail(forPosts:)
   }
   
-  private func parse(response: Promise<String>) -> Promise<LiveStreamFailsCollection> {
-    let selectPostCard = HTMLParser.selectDoc(path: "div.post-card")
-    
-    return response
-      .then(on: DispatchQueue.global(qos: .background)) { (stringResponse: String) -> Promise<LiveStreamFailsCollection> in
-        return stringResponse
-          |> HTMLParser.createDocument(fromHTMLString:)
-          |> selectPostCard
-          |> resultMap(f: { LiveStreamFailsCollection(elements: $0) })
-          |> mapToPromise(result:)
-    }
-  }
-  
-  private func requestDetail(forPosts posts: Promise<LiveStreamFailsCollection>) -> Promise<LiveStreamFailsCollection> {
-    return posts
-      .then(on: DispatchQueue.global(qos: .background)) { (liveStreamFailsCollection: LiveStreamFailsCollection) -> Promise<LiveStreamFailsCollection> in
-        let mergePosts = self.merge(posts: liveStreamFailsCollection)
-        
-        return when(resolved: liveStreamFailsCollection.posts.map { self.fetchVideoStreamDetail(forPostId: String($0.id)) })
-          .map{ (response: [Result<(id: String, video: URL)>]) -> LiveStreamFailsCollection in
-            return response
-              |> mergePosts
-        }
-    }
-  }
-  
-  private func merge(posts: LiveStreamFailsCollection)
-    -> (_ result: [Result<(id: String, video: URL)>])
-    -> LiveStreamFailsCollection {
-      return { (result: [Result<(id: String, video: URL)>]) -> LiveStreamFailsCollection in
-        posts.posts = posts.posts.compactMap { (postsData: LiveStreamFailsPostsResponse) -> LiveStreamFailsPostsResponse? in
-          result.first(where: { (resultData: Result<(id: String, video: URL)>) -> Bool in
-            switch resultData {
-            case .fulfilled(let tuppleValue):
-              return tuppleValue.id == String(postsData.id) ? true : false
-            case .rejected:
-              return false
-            }
-          }).flatMap {
-            switch $0 {
-            case .fulfilled(let tuppleValue):
-              var postsValue = postsData
-              postsValue.videoUrl = tuppleValue.video
-              return postsValue
-            case .rejected:
-              return nil
-            }
-          }
-        }
-        
-        return posts
-      }
-  }
-  
-  private func fetchVideoStreamDetail(forPostId postId: String) -> Promise<(id: String, video: URL)> {
+  public func fetchVideoStreamDetail(forPostId postId: String) -> Promise<(id: String, video: URL)> {
       let parseResponse = parse(postId: postId)
       return postId
         |> Route.fetchPostDetail(postId:)
         |> request(route:)
         |> parseResponse
+  }
+  
+  private func parse(response: Promise<String>) -> Promise<[LiveStreamFailsPostsResponse]> {
+    let selectPostCard = HTMLParser.selectDoc(path: "div.post-card")
+    
+    return response
+      .then(on: DispatchQueue.global(qos: .background)) { (stringResponse: String) -> Promise<[LiveStreamFailsPostsResponse]> in
+        return stringResponse
+          |> HTMLParser.createDocument(fromHTMLString:)
+          |> selectPostCard
+          |> resultMap(f: { $0.compactMap { return LiveStreamFailsPostsResponse(element: $0) } })
+          |> mapToPromise(result:)
+    }
   }
   
   private func parse(postId: String)

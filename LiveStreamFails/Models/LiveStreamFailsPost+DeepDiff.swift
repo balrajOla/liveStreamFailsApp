@@ -9,12 +9,12 @@
 import Foundation
 import DeepDiff
 
-extension LiveStreamFailsPostsResponse: DiffAware {
+extension LiveStreamFailsPost: DiffAware {
   public var diffId: Int {
     return self.id
   }
   
-  public static func compareContent(_ a: LiveStreamFailsPostsResponse, _ b: LiveStreamFailsPostsResponse) -> Bool {
+  public static func compareContent(_ a: LiveStreamFailsPost, _ b: LiveStreamFailsPost) -> Bool {
     return a.id == b.id
   }
 }

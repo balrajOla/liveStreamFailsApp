@@ -12,7 +12,7 @@ import DeepDiff
 class HomeScreenViewController: UIViewController {
   @IBOutlet weak var failStreamCollectionView: UICollectionView!
   
-  var dataSource: [LiveStreamFailsPostsResponse]?
+  var dataSource: [LiveStreamFailsPost]?
   
   var usecase = LiveStreamFailsPostsUsecase()
   

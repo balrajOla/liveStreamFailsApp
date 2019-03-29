@@ -33,7 +33,7 @@
 		A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */; };
 		A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */; };
 		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
-		A2734F18224D058B004ACDB8 /* LiveStreamFailsPostsResponse+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPostsResponse+DeepDiff.swift */; };
+		A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +67,7 @@
 		A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+CollectionViewDatasource.swift"; sourceTree = "<group>"; };
 		A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
-		A2734F17224D058B004ACDB8 /* LiveStreamFailsPostsResponse+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPostsResponse+DeepDiff.swift"; sourceTree = "<group>"; };
+		A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPost+DeepDiff.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +141,7 @@
 				A23254442246B55B001E8C89 /* Response */,
 				A232543D2246ABED001E8C89 /* Requests */,
 				A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */,
+				A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				A23254452246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift */,
-				A2734F17224D058B004ACDB8 /* LiveStreamFailsPostsResponse+DeepDiff.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				A2325458224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift in Sources */,
 				A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */,
 				A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */,
-				A2734F18224D058B004ACDB8 /* LiveStreamFailsPostsResponse+DeepDiff.swift in Sources */,
+				A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */,
 				A232544C22479058001E8C89 /* Operators.swift in Sources */,
 				A232545C224A9462001E8C89 /* Environment.swift in Sources */,
 				A23254482246B5FB001E8C89 /* Service.swift in Sources */,
