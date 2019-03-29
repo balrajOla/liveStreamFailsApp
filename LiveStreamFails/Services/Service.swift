@@ -29,7 +29,7 @@ public struct Service: ServiceType {
     let selectPostCard = HTMLParser.selectDoc(path: "div.post-card")
     
     return response
-      .then { (stringResponse: String) -> Promise<LiveStreamFailsCollection> in
+      .then(on: DispatchQueue.global(qos: .background)) { (stringResponse: String) -> Promise<LiveStreamFailsCollection> in
         return stringResponse
           |> HTMLParser.createDocument(fromHTMLString:)
           |> selectPostCard
@@ -40,7 +40,7 @@ public struct Service: ServiceType {
   
   private func requestDetail(forPosts posts: Promise<LiveStreamFailsCollection>) -> Promise<LiveStreamFailsCollection> {
     return posts
-      .then { (liveStreamFailsCollection: LiveStreamFailsCollection) -> Promise<LiveStreamFailsCollection> in
+      .then(on: DispatchQueue.global(qos: .background)) { (liveStreamFailsCollection: LiveStreamFailsCollection) -> Promise<LiveStreamFailsCollection> in
         let mergePosts = self.merge(posts: liveStreamFailsCollection)
         
         return when(resolved: liveStreamFailsCollection.posts.map { self.fetchVideoStreamDetail(forPostId: String($0.id)) })
@@ -93,7 +93,7 @@ public struct Service: ServiceType {
       return { (_ details: Promise<String>) -> Promise<(id: String, video: URL)> in
         let parseVideoWithID = self.parseVideo(postId: postId)
         return details
-          .then {
+          .then(on: DispatchQueue.global(qos: .background)) {
             $0
               |> HTMLParser.createDocument(fromHTMLString:)
               |> parseVideoWithID
