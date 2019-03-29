@@ -34,6 +34,8 @@
 		A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */; };
 		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
 		A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */; };
+		A2D729D1224E95C500757CD4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D0224E95C500757CD4 /* Loader.swift */; };
+		A2D729D3224E95E200757CD4 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D2224E95E200757CD4 /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPost+DeepDiff.swift"; sourceTree = "<group>"; };
+		A2D729D0224E95C500757CD4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		A2D729D2224E95E200757CD4 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				A232545B224A9462001E8C89 /* Environment.swift */,
 				A232545F224A9EB0001E8C89 /* Paginator.swift */,
 				A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */,
+				A2D729D0224E95C500757CD4 /* Loader.swift */,
+				A2D729D2224E95E200757CD4 /* PulseAnimation.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				A2325458224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift in Sources */,
 				A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */,
 				A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */,
+				A2D729D3224E95E200757CD4 /* PulseAnimation.swift in Sources */,
 				A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */,
 				A232544C22479058001E8C89 /* Operators.swift in Sources */,
 				A232545C224A9462001E8C89 /* Environment.swift in Sources */,
@@ -365,6 +372,7 @@
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
+				A2D729D1224E95C500757CD4 /* Loader.swift in Sources */,
 				A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
 				A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */,

@@ -11,6 +11,7 @@ import DeepDiff
 
 class HomeScreenViewController: UIViewController {
   @IBOutlet weak var failStreamCollectionView: UICollectionView!
+  @IBOutlet weak var splashScreenView: UIView!
   
   var dataSource: [LiveStreamFailsPost]?
   
@@ -26,10 +27,14 @@ class HomeScreenViewController: UIViewController {
       
       self.failStreamCollectionView.registerCells([FailStreamDetailViewCell.self], bundle: Bundle.main)
       
-      usecase.getLiveFeedPosts()
+      showLoader()
+      _ = usecase.getLiveFeedPosts()
         .done { response in
           self.dataSource = response.posts
           self.failStreamCollectionView.reloadData()
+        }.tap { _ in
+          self.hideLoader()
+          self.splashScreenView.isHidden = true
       }
     }
 }
@@ -37,5 +42,19 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: self.failStreamCollectionView.frame.width, height: self.failStreamCollectionView.frame.height)
+  }
+}
+
+extension HomeScreenViewController {
+  func showLoader() {
+    DispatchQueue.main.async {
+      Loader.show()
+    }
+  }
+  
+  func hideLoader() {
+    DispatchQueue.main.async {
+      Loader.hide()
+    }
   }
 }
