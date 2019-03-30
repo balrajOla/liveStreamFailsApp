@@ -21,7 +21,7 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
       
       // set up navigation bar
-      var nav = self.navigationController?.navigationBar
+      let nav = self.navigationController?.navigationBar
       nav?.barStyle = UIBarStyle.black
       nav?.tintColor = UIColor.white
       nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
