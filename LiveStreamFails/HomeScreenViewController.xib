@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="LiveStreamFails" customModuleProvider="target">
             <connections>
-                <outlet property="failStreamCollectionView" destination="tkw-5p-hGo" id="VEt-47-lNB"/>
+                <outlet property="failStreamTableView" destination="2Oa-Lq-zaG" id="E8r-21-RKc"/>
                 <outlet property="splashScreenView" destination="Dnz-sc-TPJ" id="vsR-1F-e3h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,16 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tkw-5p-hGo" userLabel="failStreamCollection">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Oa-Lq-zaG">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dnT-HP-cbk">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnz-sc-TPJ" userLabel="SplashScreen">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
@@ -57,16 +52,15 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Dnz-sc-TPJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4DU-UK-oio"/>
-                <constraint firstItem="tkw-5p-hGo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Dio-g1-uL7"/>
-                <constraint firstItem="tkw-5p-hGo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ERM-Og-nxX"/>
-                <constraint firstItem="tkw-5p-hGo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="R3c-bF-ZBM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Oa-Lq-zaG" secondAttribute="bottom" id="FOf-Av-3VQ"/>
+                <constraint firstItem="2Oa-Lq-zaG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R7o-VG-2Rg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dnz-sc-TPJ" secondAttribute="trailing" id="SdI-jp-eYR"/>
+                <constraint firstItem="2Oa-Lq-zaG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="flR-Uw-OCX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Oa-Lq-zaG" secondAttribute="trailing" id="hjF-48-DC3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dnz-sc-TPJ" secondAttribute="bottom" id="iCn-gp-uvK"/>
                 <constraint firstItem="Dnz-sc-TPJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mfO-Hh-wxQ"/>
-                <constraint firstItem="tkw-5p-hGo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="omF-wu-wuv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

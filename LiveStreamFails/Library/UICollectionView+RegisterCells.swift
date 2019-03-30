@@ -21,6 +21,19 @@ extension UICollectionView {
   }
 }
 
+extension UITableView {
+  
+  public func register<T>(_ anyClass : T.Type, bundle : Bundle) -> Void where T : UITableViewCell {
+    self.register(UINib(nibName: String.stringFromClass(anyClass), bundle: bundle), forCellReuseIdentifier: String.stringFromClass(anyClass))
+  }
+  
+  public func registerCells<T>(_ cells : [T.Type], bundle : Bundle) -> Void where T : UITableViewCell {
+    for cellClass in cells {
+      self.register(cellClass, bundle : bundle)
+    }
+  }
+}
+
 extension String {
   
   static func stringFromClass(_ anyClass : AnyClass) -> String {

@@ -1,15 +1,16 @@
 //
-//  FailStreamDetailViewCell.swift
+//  FailStreamDetailVTableViewCell.swift
 //  LiveStreamFails
 //
-//  Created by Balraj Singh on 28/03/19.
+//  Created by Balraj Singh on 30/03/19.
 //  Copyright © 2019 balraj. All rights reserved.
 //
 
 import UIKit
 import AlamofireImage
 
-class FailStreamDetailViewCell: UICollectionViewCell {
+class FailStreamDetailVTableViewCell: UITableViewCell {
+
   @IBOutlet weak var liveStreamImg: UIImageView!
   @IBOutlet weak var title: UILabel!
   @IBOutlet weak var subTitle: UILabel!
@@ -35,4 +36,5 @@ class FailStreamDetailViewCell: UICollectionViewCell {
     self.title.text = data.title
     self.subTitle.text = [data.streamer, data.game].compactMap { $0 }.joined(separator: " playing ")
   }
+    
 }

@@ -10,7 +10,7 @@ import UIKit
 import DeepDiff
 
 class HomeScreenViewController: UIViewController {
-  @IBOutlet weak var failStreamCollectionView: UICollectionView!
+  @IBOutlet weak var failStreamTableView: UITableView!
   @IBOutlet weak var splashScreenView: UIView!
   
   var dataSource: [LiveStreamFailsPost]?
@@ -19,30 +19,31 @@ class HomeScreenViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      // set up navigation bar
+      var nav = self.navigationController?.navigationBar
+      nav?.barStyle = UIBarStyle.black
+      nav?.tintColor = UIColor.white
+      nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+      self.title = "LivestreamFails"
 
         // Do any additional setup after loading the view.
-      self.failStreamCollectionView.dataSource = self
-      self.failStreamCollectionView.delegate = self
-      self.failStreamCollectionView.isPagingEnabled = true
+      self.failStreamTableView.dataSource = self
+      self.failStreamTableView.delegate = self
+      self.failStreamTableView.isPagingEnabled = true
       
-      self.failStreamCollectionView.registerCells([FailStreamDetailViewCell.self], bundle: Bundle.main)
+      self.failStreamTableView.registerCells([FailStreamDetailVTableViewCell.self], bundle: Bundle.main)
       
       showLoader()
       _ = usecase.getLiveFeedPosts()
         .done { response in
           self.dataSource = response.posts
-          self.failStreamCollectionView.reloadData()
+          self.failStreamTableView.reloadData()
         }.tap { _ in
           self.hideLoader()
           self.splashScreenView.isHidden = true
       }
     }
-}
-
-extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: self.failStreamCollectionView.frame.width, height: self.failStreamCollectionView.frame.height)
-  }
 }
 
 extension HomeScreenViewController {

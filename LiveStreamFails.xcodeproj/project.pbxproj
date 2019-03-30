@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0847F685B128FB0062D028ED /* Pods_LiveStreamFails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAA74DFF1BBD09D0C983034 /* Pods_LiveStreamFails.framework */; };
+		A22268AE224F70EB00320635 /* FailStreamDetailVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268AC224F70EB00320635 /* FailStreamDetailVTableViewCell.swift */; };
+		A22268AF224F70EB00320635 /* FailStreamDetailVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22268AD224F70EB00320635 /* FailStreamDetailVTableViewCell.xib */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
 		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
@@ -28,10 +30,7 @@
 		A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545D224A95BE001E8C89 /* ServerConfig.swift */; };
 		A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232545F224A9EB0001E8C89 /* Paginator.swift */; };
 		A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */; };
-		A2734F0E224C8609004ACDB8 /* FailStreamDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */; };
-		A2734F0F224C8609004ACDB8 /* FailStreamDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */; };
 		A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */; };
-		A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */; };
 		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
 		A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */; };
 		A2D729D1224E95C500757CD4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D0224E95C500757CD4 /* Loader.swift */; };
@@ -42,6 +41,8 @@
 		3718790CB6A3A4BCE0947797 /* Pods-LiveStreamFails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStreamFails.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails.release.xcconfig"; sourceTree = "<group>"; };
 		7AAA74DFF1BBD09D0C983034 /* Pods_LiveStreamFails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveStreamFails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD3230F70654C9EA2D31F4E /* Pods-LiveStreamFails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStreamFails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails.debug.xcconfig"; sourceTree = "<group>"; };
+		A22268AC224F70EB00320635 /* FailStreamDetailVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailStreamDetailVTableViewCell.swift; sourceTree = "<group>"; };
+		A22268AD224F70EB00320635 /* FailStreamDetailVTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailStreamDetailVTableViewCell.xib; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,10 +65,7 @@
 		A232545D224A95BE001E8C89 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		A232545F224A9EB0001E8C89 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		A2325464224B0B2C001E8C89 /* LiveStreamFailsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsCollection.swift; sourceTree = "<group>"; };
-		A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailStreamDetailViewCell.swift; sourceTree = "<group>"; };
-		A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailStreamDetailViewCell.xib; sourceTree = "<group>"; };
 		A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+CollectionViewDatasource.swift"; sourceTree = "<group>"; };
-		A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPost+DeepDiff.swift"; sourceTree = "<group>"; };
 		A2D729D0224E95C500757CD4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -214,8 +212,8 @@
 		A2734F0B224C85D4004ACDB8 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				A2734F0C224C8609004ACDB8 /* FailStreamDetailViewCell.swift */,
-				A2734F0D224C8609004ACDB8 /* FailStreamDetailViewCell.xib */,
+				A22268AC224F70EB00320635 /* FailStreamDetailVTableViewCell.swift */,
+				A22268AD224F70EB00320635 /* FailStreamDetailVTableViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -224,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */,
-				A2734F13224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,9 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2734F0F224C8609004ACDB8 /* FailStreamDetailViewCell.xib in Resources */,
 				A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */,
 				A232543522468E3B001E8C89 /* HomeScreenViewController.xib in Resources */,
+				A22268AF224F70EB00320635 /* FailStreamDetailVTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,17 +365,16 @@
 				A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */,
 				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
 				A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */,
+				A22268AE224F70EB00320635 /* FailStreamDetailVTableViewCell.swift in Sources */,
 				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A2D729D1224E95C500757CD4 /* Loader.swift in Sources */,
-				A2734F14224C9134004ACDB8 /* HomeScreenViewController+UICollectionViewDelegate.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,
 				A2325460224A9EB0001E8C89 /* Paginator.swift in Sources */,
 				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
 				A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */,
-				A2734F0E224C8609004ACDB8 /* FailStreamDetailViewCell.swift in Sources */,
 				A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */,
 				A23254432246B500001E8C89 /* ServiceType.swift in Sources */,
 				A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */,

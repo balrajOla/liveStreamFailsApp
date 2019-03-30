@@ -9,26 +9,20 @@
 import UIKit
 import DeepDiff
 
-extension HomeScreenViewController: UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension HomeScreenViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.dataSource?.count ?? 0
   }
   
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-    
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let data = self.dataSource?[indexPath.row],
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FailStreamDetailViewCell.identifier,
-                                                        for: indexPath) as? FailStreamDetailViewCell else {
-                                                          fatalError("Failed to dequeue cell")
+      let cell = tableView.dequeueReusableCell(withIdentifier: FailStreamDetailVTableViewCell.identifier,
+                                                    for: indexPath) as? FailStreamDetailVTableViewCell else {
+                                                      fatalError("Failed to dequeue cell")
     }
     
     cell.set(data: data)
     return cell
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-    checkAndPrefetchFails(forIndexPath: indexPath)
   }
   
   private func checkAndPrefetchFails(forIndexPath indexPath: IndexPath) {
@@ -38,11 +32,21 @@ extension HomeScreenViewController: UICollectionViewDataSource {
         .done { response in
           self.dataSource.map {
             let changes = diff(old: $0, new: response.posts)
-            self.failStreamCollectionView.reload(changes: changes, updateData: {
+            self.failStreamTableView.reload(changes: changes, updateData: {
               self.dataSource = response.posts
             })
           }
         }.tap { _ in self.hideLoader() }
     }
+  }
+}
+
+extension HomeScreenViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return self.failStreamTableView.bounds.height
+  }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    checkAndPrefetchFails(forIndexPath: indexPath)
   }
 }
