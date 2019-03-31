@@ -10,6 +10,9 @@
 		0847F685B128FB0062D028ED /* Pods_LiveStreamFails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAA74DFF1BBD09D0C983034 /* Pods_LiveStreamFails.framework */; };
 		A22268AE224F70EB00320635 /* FailStreamDetailVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268AC224F70EB00320635 /* FailStreamDetailVTableViewCell.swift */; };
 		A22268AF224F70EB00320635 /* FailStreamDetailVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22268AD224F70EB00320635 /* FailStreamDetailVTableViewCell.xib */; };
+		A22268B22250AF8600320635 /* VideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B12250AF8600320635 /* VideoContainer.swift */; };
+		A22268B42250AF9B00320635 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B32250AF9B00320635 /* VideoPlayerController.swift */; };
+		A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B52250B09000320635 /* VideoLayerObject.swift */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
 		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
@@ -43,6 +46,9 @@
 		9AD3230F70654C9EA2D31F4E /* Pods-LiveStreamFails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStreamFails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails.debug.xcconfig"; sourceTree = "<group>"; };
 		A22268AC224F70EB00320635 /* FailStreamDetailVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailStreamDetailVTableViewCell.swift; sourceTree = "<group>"; };
 		A22268AD224F70EB00320635 /* FailStreamDetailVTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailStreamDetailVTableViewCell.xib; sourceTree = "<group>"; };
+		A22268B12250AF8600320635 /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainer.swift; sourceTree = "<group>"; };
+		A22268B32250AF9B00320635 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
+		A22268B52250B09000320635 /* VideoLayerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLayerObject.swift; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +97,16 @@
 				3718790CB6A3A4BCE0947797 /* Pods-LiveStreamFails.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A22268B02250AF6200320635 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A22268B12250AF8600320635 /* VideoContainer.swift */,
+				A22268B32250AF9B00320635 /* VideoPlayerController.swift */,
+				A22268B52250B09000320635 /* VideoLayerObject.swift */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		A232540722461DD5001E8C89 = {
@@ -151,6 +167,7 @@
 		A232543822469004001E8C89 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A22268B02250AF6200320635 /* VideoPlayer */,
 				A23254402246AD32001E8C89 /* DictionaryEncodable.swift */,
 				A232544B22479058001E8C89 /* Operators.swift */,
 				A232544D22485E75001E8C89 /* HTMLParser.swift */,
@@ -361,6 +378,7 @@
 				A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */,
 				A232544C22479058001E8C89 /* Operators.swift in Sources */,
 				A232545C224A9462001E8C89 /* Environment.swift in Sources */,
+				A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */,
 				A23254482246B5FB001E8C89 /* Service.swift in Sources */,
 				A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */,
 				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
@@ -369,6 +387,8 @@
 				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
+				A22268B22250AF8600320635 /* VideoContainer.swift in Sources */,
+				A22268B42250AF9B00320635 /* VideoPlayerController.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A2D729D1224E95C500757CD4 /* Loader.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,

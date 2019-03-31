@@ -17,12 +17,36 @@ extension HomeScreenViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let data = self.dataSource?[indexPath.row],
       let cell = tableView.dequeueReusableCell(withIdentifier: FailStreamDetailVTableViewCell.identifier,
-                                                    for: indexPath) as? FailStreamDetailVTableViewCell else {
-                                                      fatalError("Failed to dequeue cell")
+                                               for: indexPath) as? FailStreamDetailVTableViewCell else {
+                                                fatalError("Failed to dequeue cell")
     }
     
     cell.set(data: data)
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if let videoCell = cell as? AutoPlayVideoLayerContainer, let _ = videoCell.videoURL {
+      VideoPlayerController.sharedVideoPlayer.removeLayerFor(cell: videoCell)
+    }
+  }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    pausePlayeVideos()
+  }
+  
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    if !decelerate {
+      pausePlayeVideos()
+    }
+  }
+  
+  func pausePlayeVideos(){
+    VideoPlayerController.sharedVideoPlayer.pausePlayeVideosFor(tableView: self.failStreamTableView)
+  }
+  
+  @objc func appEnteredFromBackground() {
+    VideoPlayerController.sharedVideoPlayer.pausePlayeVideosFor(tableView: self.failStreamTableView, appEnteredFromBackground: true)
   }
   
   private func checkAndPrefetchFails(forIndexPath indexPath: IndexPath) {
