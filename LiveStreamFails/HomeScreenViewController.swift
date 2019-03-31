@@ -30,6 +30,7 @@ class HomeScreenViewController: UIViewController {
     // Do any additional setup after loading the view.
     self.failStreamTableView.dataSource = self
     self.failStreamTableView.delegate = self
+    self.failStreamTableView.prefetchDataSource = self
     self.failStreamTableView.isPagingEnabled = true
     
     self.failStreamTableView.registerCells([FailStreamDetailVTableViewCell.self], bundle: Bundle.main)

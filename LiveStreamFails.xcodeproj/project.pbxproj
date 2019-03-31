@@ -14,6 +14,7 @@
 		A22268B42250AF9B00320635 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B32250AF9B00320635 /* VideoPlayerController.swift */; };
 		A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B52250B09000320635 /* VideoLayerObject.swift */; };
 		A22268BA225138FC00320635 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B9225138FC00320635 /* UIImage.swift */; };
+		A22268BC22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268BB22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
 		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
@@ -51,6 +52,7 @@
 		A22268B32250AF9B00320635 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		A22268B52250B09000320635 /* VideoLayerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLayerObject.swift; sourceTree = "<group>"; };
 		A22268B9225138FC00320635 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		A22268BB22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+ UITableViewDataSourcePrefetching.swift"; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */,
+				A22268BB22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
 				A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */,
 				A22268AE224F70EB00320635 /* FailStreamDetailVTableViewCell.swift in Sources */,
+				A22268BC22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift in Sources */,
 				A232543C2246AB5B001E8C89 /* Route.swift in Sources */,
 				A232545E224A95BE001E8C89 /* ServerConfig.swift in Sources */,
 				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
