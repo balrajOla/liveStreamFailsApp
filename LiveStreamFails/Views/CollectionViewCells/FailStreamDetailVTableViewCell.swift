@@ -35,7 +35,7 @@ class FailStreamDetailVTableViewCell: UITableViewCell, AutoPlayVideoLayerContain
     super.awakeFromNib()
     // Initialization code
     videoLayer.backgroundColor = UIColor.clear.cgColor
-    videoLayer.videoGravity = AVLayerVideoGravity.resize
+    videoLayer.videoGravity = AVLayerVideoGravity.resizeAspect
     liveStreamImg.layer.addSublayer(videoLayer)
     selectionStyle = .none
   }
