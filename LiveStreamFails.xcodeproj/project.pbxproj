@@ -13,6 +13,7 @@
 		A22268B22250AF8600320635 /* VideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B12250AF8600320635 /* VideoContainer.swift */; };
 		A22268B42250AF9B00320635 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B32250AF9B00320635 /* VideoPlayerController.swift */; };
 		A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B52250B09000320635 /* VideoLayerObject.swift */; };
+		A22268BA225138FC00320635 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B9225138FC00320635 /* UIImage.swift */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
 		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
@@ -49,6 +50,7 @@
 		A22268B12250AF8600320635 /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainer.swift; sourceTree = "<group>"; };
 		A22268B32250AF9B00320635 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		A22268B52250B09000320635 /* VideoLayerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLayerObject.swift; sourceTree = "<group>"; };
+		A22268B9225138FC00320635 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */,
 				A2D729D0224E95C500757CD4 /* Loader.swift */,
 				A2D729D2224E95E200757CD4 /* PulseAnimation.swift */,
+				A22268B9225138FC00320635 /* UIImage.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				A232545C224A9462001E8C89 /* Environment.swift in Sources */,
 				A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */,
 				A23254482246B5FB001E8C89 /* Service.swift in Sources */,
+				A22268BA225138FC00320635 /* UIImage.swift in Sources */,
 				A232544A2246B9AB001E8C89 /* Service+RequestHelper.swift in Sources */,
 				A232545022486ACC001E8C89 /* Result+MapValue.swift in Sources */,
 				A232545A224A9435001E8C89 /* AppEnvironment.swift in Sources */,

@@ -48,7 +48,10 @@ class FailStreamDetailVTableViewCell: UITableViewCell, AutoPlayVideoLayerContain
   }
   
   public func set(data: LiveStreamFailsPost) {
-    data.imageUrl.map { self.liveStreamImg.af_setImage(withURL: $0) }
+    data.imageUrl.map { self.liveStreamImg.af_setImage(withURL: $0, completion: { _ -> Void in
+      self.videoLayer.frame = self.liveStreamImg.contentClippingRect
+    }) }
+    
     self.title.text = data.title
     self.subTitle.text = [data.streamer, data.game].compactMap { $0 }.joined(separator: " playing ")
     self.videoURL = data.videoUrl?.absoluteString
@@ -56,7 +59,6 @@ class FailStreamDetailVTableViewCell: UITableViewCell, AutoPlayVideoLayerContain
   
   override func layoutSubviews() {
     super.layoutSubviews()
-   videoLayer.frame = self.liveStreamImg.bounds
   }
   
   func visibleVideoHeight() -> CGFloat {
