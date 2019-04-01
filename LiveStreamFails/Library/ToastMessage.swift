@@ -12,7 +12,7 @@ extension UIViewController {
   func showToast(message : String) {
     
     let toastLabel = UILabel(frame: CGRect(x: 10, y: self.view.frame.size.height-100, width: self.view.frame.size.width - 20, height: 35))
-    toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+    toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.8)
     toastLabel.textColor = UIColor.black
     toastLabel.textAlignment = .center;
     toastLabel.font = UIFont.systemFont(ofSize: 10)
@@ -21,7 +21,7 @@ extension UIViewController {
     toastLabel.layer.cornerRadius = 10;
     toastLabel.clipsToBounds  =  true
     self.view.addSubview(toastLabel)
-    UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+    UIView.animate(withDuration: 5.0, delay: 0.1, options: .curveEaseOut, animations: {
       toastLabel.alpha = 0.0
     }, completion: {(isCompleted) in
       toastLabel.removeFromSuperview()
