@@ -15,6 +15,8 @@
 		A22268B62250B09000320635 /* VideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B52250B09000320635 /* VideoLayerObject.swift */; };
 		A22268BA225138FC00320635 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268B9225138FC00320635 /* UIImage.swift */; };
 		A22268BC22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268BB22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift */; };
+		A22268BE2251A43500320635 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268BD2251A43500320635 /* Network.swift */; };
+		A22268C02251A45400320635 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22268BF2251A45400320635 /* ErrorHandler.swift */; };
 		A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232541322461DD5001E8C89 /* AppDelegate.swift */; };
 		A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232541A22461DD6001E8C89 /* Assets.xcassets */; };
 		A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232543222468E3B001E8C89 /* HomeScreenViewController.swift */; };
@@ -53,6 +55,8 @@
 		A22268B52250B09000320635 /* VideoLayerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLayerObject.swift; sourceTree = "<group>"; };
 		A22268B9225138FC00320635 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A22268BB22513D0E00320635 /* HomeScreenViewController+ UITableViewDataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+ UITableViewDataSourcePrefetching.swift"; sourceTree = "<group>"; };
+		A22268BD2251A43500320635 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A22268BF2251A45400320635 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		A232541022461DD5001E8C89 /* LiveStreamFails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamFails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232541322461DD5001E8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A232541A22461DD6001E8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				A2D729D0224E95C500757CD4 /* Loader.swift */,
 				A2D729D2224E95E200757CD4 /* PulseAnimation.swift */,
 				A22268B9225138FC00320635 /* UIImage.swift */,
+				A22268BD2251A43500320635 /* Network.swift */,
+				A22268BF2251A45400320635 /* ErrorHandler.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				A2325458224A4C60001E8C89 /* LiveStreamFailsPostsUsecase.swift in Sources */,
 				A232544E22485E75001E8C89 /* HTMLParser.swift in Sources */,
 				A23254462246B57A001E8C89 /* LiveStreamFailsPostsResponse.swift in Sources */,
+				A22268C02251A45400320635 /* ErrorHandler.swift in Sources */,
 				A2D729D3224E95E200757CD4 /* PulseAnimation.swift in Sources */,
 				A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */,
 				A232544C22479058001E8C89 /* Operators.swift in Sources */,
@@ -397,6 +404,7 @@
 				A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */,
 				A22268B22250AF8600320635 /* VideoContainer.swift in Sources */,
 				A22268B42250AF9B00320635 /* VideoPlayerController.swift in Sources */,
+				A22268BE2251A43500320635 /* Network.swift in Sources */,
 				A23254412246AD32001E8C89 /* DictionaryEncodable.swift in Sources */,
 				A2D729D1224E95C500757CD4 /* Loader.swift in Sources */,
 				A232541422461DD5001E8C89 /* AppDelegate.swift in Sources */,

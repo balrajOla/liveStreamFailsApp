@@ -61,6 +61,9 @@ extension HomeScreenViewController: UITableViewDataSource {
             })
           }
         }.tap { _ in self.hideLoader() }
+        .catch { _ in
+          ErrorHandler.showErrorAlert(withMessage: "Something went wrong. Please try again.")
+      }
     }
   }
 }

@@ -13,6 +13,7 @@ import Alamofire
 enum ServiceError: Error {
   case urlInvalid
   case parsingIssue
+  case noInternet
 }
 
 extension Service {

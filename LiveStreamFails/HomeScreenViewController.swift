@@ -48,6 +48,8 @@ class HomeScreenViewController: UIViewController {
         self.hideLoader()
         self.pausePlayeVideos()
         self.splashScreenView.isHidden = true
+      }.catch { _ in
+        ErrorHandler.showErrorAlert(withMessage: "Something went wrong. Please try again.")
     }
   }
   

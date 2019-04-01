@@ -19,7 +19,11 @@ public struct LiveStreamFailsPostsUsecase {
   }
   
   public func getLiveFeedPosts() -> Promise<LiveStreamFailsCollection> {
-    return self.paginator.fetchNextPage()
+    if Network.isConnected() {
+      return self.paginator.fetchNextPage()
+    } else {
+      return Promise(error: ServiceError.noInternet)
+    }
   }
   
   private func fetchLiveFeedPosts(page: Int, pageSize: Int) -> Promise<LiveStreamFailsCollection> {
