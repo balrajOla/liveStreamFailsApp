@@ -13,6 +13,8 @@ class HomeScreenViewController: UIViewController {
   @IBOutlet weak var failStreamTableView: UITableView!
   @IBOutlet weak var splashScreenView: UIView!
   
+  let commingSoonMessage = "We are working to get this feature done. Coming Soon!!!"
+  
   var dataSource: [LiveStreamFailsPost]?
   
   var usecase = LiveStreamFailsPostsUsecase()
@@ -51,6 +53,18 @@ class HomeScreenViewController: UIViewController {
       }.catch { _ in
         ErrorHandler.showErrorAlert(withMessage: "Something went wrong. Please try again.")
     }
+  }
+  
+  @IBAction func shareBtnClicked(_ sender: Any) {
+    self.showToast(message: commingSoonMessage)
+  }
+  
+  @IBAction func favBtnClicked(_ sender: Any) {
+    self.showToast(message: commingSoonMessage)
+  }
+  
+  @IBAction func commentBtnClicked(_ sender: Any) {
+    self.showToast(message: commingSoonMessage)
   }
   
   override func viewDidAppear(_ animated: Bool) {

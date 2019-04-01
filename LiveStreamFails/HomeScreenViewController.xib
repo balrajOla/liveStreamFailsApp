@@ -27,6 +27,47 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DGu-Bs-amr">
+                    <rect key="frame" x="340" y="522" width="25" height="115"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-Bh-dc5" userLabel="shareBtn">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="7WM-ka-2xt"/>
+                                <constraint firstAttribute="width" constant="25" id="z8o-fM-gAi"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="shareIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="shareBtnClicked:" destination="-1" eventType="touchUpInside" id="4bq-45-qlg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-RQ-f1n" userLabel="favBtn">
+                            <rect key="frame" x="0.0" y="45" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="OzX-Bv-gNG"/>
+                                <constraint firstAttribute="width" constant="25" id="nxq-cT-HAk"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="favoritesIcon"/>
+                            <connections>
+                                <action selector="favBtnClicked:" destination="-1" eventType="touchUpInside" id="h7F-uX-XVX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2c-fG-mdv" userLabel="commentBtn">
+                            <rect key="frame" x="0.0" y="90" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="B2v-Sx-by3"/>
+                                <constraint firstAttribute="height" constant="25" id="fOT-7M-5qy"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="commentIcon"/>
+                            <connections>
+                                <action selector="commentBtnClicked:" destination="-1" eventType="touchUpInside" id="AdG-mT-4Hy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnz-sc-TPJ" userLabel="SplashScreen">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
@@ -60,12 +101,17 @@
                 <constraint firstItem="2Oa-Lq-zaG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="flR-Uw-OCX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Oa-Lq-zaG" secondAttribute="trailing" id="hjF-48-DC3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dnz-sc-TPJ" secondAttribute="bottom" id="iCn-gp-uvK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DGu-Bs-amr" secondAttribute="trailing" constant="10" id="jZm-7O-lTO"/>
                 <constraint firstItem="Dnz-sc-TPJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mfO-Hh-wxQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DGu-Bs-amr" secondAttribute="bottom" constant="30" id="o7e-ew-CPe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
     <resources>
+        <image name="commentIcon" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="favoritesIcon" width="156.52174377441406" height="156.52174377441406"/>
         <image name="logoSmallWhite" width="80" height="70.400001525878906"/>
+        <image name="shareIcon" width="153.60000610351562" height="153.60000610351562"/>
     </resources>
 </document>

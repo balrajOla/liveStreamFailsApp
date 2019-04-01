@@ -40,6 +40,7 @@
 		A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */; };
 		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
 		A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */; };
+		A29941AF2251D2A0006CFCD9 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29941AE2251D2A0006CFCD9 /* ToastMessage.swift */; };
 		A2D729D1224E95C500757CD4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D0224E95C500757CD4 /* Loader.swift */; };
 		A2D729D3224E95E200757CD4 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D2224E95E200757CD4 /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		A2734F11224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+CollectionViewDatasource.swift"; sourceTree = "<group>"; };
 		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPost+DeepDiff.swift"; sourceTree = "<group>"; };
+		A29941AE2251D2A0006CFCD9 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		A2D729D0224E95C500757CD4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		A2D729D2224E95E200757CD4 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 				A22268B9225138FC00320635 /* UIImage.swift */,
 				A22268BD2251A43500320635 /* Network.swift */,
 				A22268BF2251A45400320635 /* ErrorHandler.swift */,
+				A29941AE2251D2A0006CFCD9 /* ToastMessage.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				A232543422468E3B001E8C89 /* HomeScreenViewController.swift in Sources */,
 				A2734F12224C9044004ACDB8 /* HomeScreenViewController+CollectionViewDatasource.swift in Sources */,
 				A232543F2246AC0A001E8C89 /* LiveStreamFailsRequest.swift in Sources */,
+				A29941AF2251D2A0006CFCD9 /* ToastMessage.swift in Sources */,
 				A23254432246B500001E8C89 /* ServiceType.swift in Sources */,
 				A2325465224B0B2C001E8C89 /* LiveStreamFailsCollection.swift in Sources */,
 			);
