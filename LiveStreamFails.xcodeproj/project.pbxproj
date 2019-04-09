@@ -41,9 +41,20 @@
 		A2734F16224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */; };
 		A2734F18224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */; };
 		A29941AF2251D2A0006CFCD9 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29941AE2251D2A0006CFCD9 /* ToastMessage.swift */; };
+		A29F3D4F225B130500180349 /* LiveStreamFailsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29F3D4E225B130500180349 /* LiveStreamFailsUnitTests.swift */; };
 		A2D729D1224E95C500757CD4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D0224E95C500757CD4 /* Loader.swift */; };
 		A2D729D3224E95E200757CD4 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D729D2224E95E200757CD4 /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A29F3D51225B130500180349 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A232540822461DD5001E8C89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A232540F22461DD5001E8C89;
+			remoteInfo = LiveStreamFails;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3718790CB6A3A4BCE0947797 /* Pods-LiveStreamFails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStreamFails.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveStreamFails/Pods-LiveStreamFails.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +95,9 @@
 		A2734F15224CAEC4004ACDB8 /* UICollectionView+RegisterCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCells.swift"; sourceTree = "<group>"; };
 		A2734F17224D058B004ACDB8 /* LiveStreamFailsPost+DeepDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveStreamFailsPost+DeepDiff.swift"; sourceTree = "<group>"; };
 		A29941AE2251D2A0006CFCD9 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
+		A29F3D4C225B130500180349 /* LiveStreamFailsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveStreamFailsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29F3D4E225B130500180349 /* LiveStreamFailsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamFailsUnitTests.swift; sourceTree = "<group>"; };
+		A29F3D50225B130500180349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D729D0224E95C500757CD4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		A2D729D2224E95E200757CD4 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +108,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0847F685B128FB0062D028ED /* Pods_LiveStreamFails.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29F3D49225B130500180349 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A232541222461DD5001E8C89 /* LiveStreamFails */,
+				A29F3D4D225B130500180349 /* LiveStreamFailsUnitTests */,
 				A232541122461DD5001E8C89 /* Products */,
 				8FC9FE08133565C5DF091B95 /* Pods */,
 				E05B47C56B80B3290F4F3E97 /* Frameworks */,
@@ -133,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A232541022461DD5001E8C89 /* LiveStreamFails.app */,
+				A29F3D4C225B130500180349 /* LiveStreamFailsUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +281,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A29F3D4D225B130500180349 /* LiveStreamFailsUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A29F3D4E225B130500180349 /* LiveStreamFailsUnitTests.swift */,
+				A29F3D50225B130500180349 /* Info.plist */,
+			);
+			path = LiveStreamFailsUnitTests;
+			sourceTree = "<group>";
+		};
 		E05B47C56B80B3290F4F3E97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +320,24 @@
 			productReference = A232541022461DD5001E8C89 /* LiveStreamFails.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A29F3D4B225B130500180349 /* LiveStreamFailsUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29F3D55225B130500180349 /* Build configuration list for PBXNativeTarget "LiveStreamFailsUnitTests" */;
+			buildPhases = (
+				A29F3D48225B130500180349 /* Sources */,
+				A29F3D49225B130500180349 /* Frameworks */,
+				A29F3D4A225B130500180349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A29F3D52225B130500180349 /* PBXTargetDependency */,
+			);
+			name = LiveStreamFailsUnitTests;
+			productName = LiveStreamFailsUnitTests;
+			productReference = A29F3D4C225B130500180349 /* LiveStreamFailsUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,6 +350,10 @@
 				TargetAttributes = {
 					A232540F22461DD5001E8C89 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					A29F3D4B225B130500180349 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A232540F22461DD5001E8C89;
 					};
 				};
 			};
@@ -317,6 +371,7 @@
 			projectRoot = "";
 			targets = (
 				A232540F22461DD5001E8C89 /* LiveStreamFails */,
+				A29F3D4B225B130500180349 /* LiveStreamFailsUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -329,6 +384,13 @@
 				A232541B22461DD6001E8C89 /* Assets.xcassets in Resources */,
 				A232543522468E3B001E8C89 /* HomeScreenViewController.xib in Resources */,
 				A22268AF224F70EB00320635 /* FailStreamDetailVTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29F3D4A225B130500180349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +483,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A29F3D48225B130500180349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29F3D4F225B130500180349 /* LiveStreamFailsUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A29F3D52225B130500180349 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A232540F22461DD5001E8C89 /* LiveStreamFails */;
+			targetProxy = A29F3D51225B130500180349 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A232542022461DD6001E8C89 /* Debug */ = {
@@ -580,6 +658,46 @@
 			};
 			name = Release;
 		};
+		A29F3D53225B130500180349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L88F2NQ59B;
+				INFOPLIST_FILE = LiveStreamFailsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.balraj.LiveStreamFailsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveStreamFails.app/LiveStreamFails";
+			};
+			name = Debug;
+		};
+		A29F3D54225B130500180349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L88F2NQ59B;
+				INFOPLIST_FILE = LiveStreamFailsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.balraj.LiveStreamFailsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveStreamFails.app/LiveStreamFails";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,6 +715,15 @@
 			buildConfigurations = (
 				A232542322461DD6001E8C89 /* Debug */,
 				A232542422461DD6001E8C89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A29F3D55225B130500180349 /* Build configuration list for PBXNativeTarget "LiveStreamFailsUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29F3D53225B130500180349 /* Debug */,
+				A29F3D54225B130500180349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
